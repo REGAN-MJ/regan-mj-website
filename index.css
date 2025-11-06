@@ -235,6 +235,53 @@ h3 {
     }
 }
 
+/* My Journey Section Styles */
+.myjournry {
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+.myjournry h2 {
+    color: orangered;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.history {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+    padding: 20px;
+    white-space: pre-line;
+}
+
+@media screen and (max-width: 768px) {
+    .myjournry {
+        padding: 20px;
+        margin: 40px 15px;
+    }
+    
+    .myjournry h2 {
+        font-size: 36px;
+    }
+    
+    .myjournry >.history {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 10px;
+        color: white;
+    }
+}
+
 .booknowbutton {
     display: flex;
     justify-content: center;
