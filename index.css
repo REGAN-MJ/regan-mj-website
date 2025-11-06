@@ -1,0 +1,274 @@
+body{
+    background-image: url(images/9805703.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+     font-family: 'Candara','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+header{
+    background-image: url(images/header_background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+header>.socials1{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 5px;
+    width: fit-content;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header>.socials1>a>img{
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    
+}
+header>.socials1>a>img:hover{
+    transform: scale(1.2);
+}  
+header>h1{
+    color:orangered;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}  
+
+@media screen and (max-width: 600px) {
+    header>.socials1 {
+        position: static;
+        transform: none;
+        margin: 20px auto 0 auto;
+        text-align: center;
+        height: fit-content;
+        flex-direction: row;
+    }
+}
+
+main{
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+.aboutme {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.aboutmeText {
+    flex: 1;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.aboutmeText h2 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    color: orangered;
+}
+.aboutmeText p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: white;
+}        
+.aboutmeImage {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+    
+   
+
+   
+}
+@media screen and (max-width: 800px) {
+    .aboutme {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .aboutmeText, .aboutmeImage {
+        flex: unset;
+        text-align: center;
+        justify-content: center;
+    }
+}
+.aboutmeImage img {
+    margin-top: px;
+    border-radius: 8px;
+    width: 350px;
+    height: 500px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.aboutmeImage.slide-in img {
+    opacity: 1;
+    transform: translateX(0);
+}
+.aboutmeText.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+.ytperformance{
+    margin-top: 60px;
+}
+.ytperformance-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+.videoContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+.ytperformanceText {
+    flex: 1;
+    text-align: left;
+}
+h3 {
+    font-size: 25px;
+    
+    color: white;
+}
+@media screen and (max-width: 800px) {
+    .ytperformance-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .ytperformanceText {
+        text-align: center;
+    }
+    .videoContainer {
+        justify-content: center;
+    }
+    
+    }
+
+.booknowbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+.booknowbutton button {
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    outline: none;
+    transition: box-shadow 0.3s;
+    animation: pumpFloat 1.2s infinite ease-in-out;
+}
+.booknowbutton button:hover {
+    box-shadow: 0 8px 24px rgba(255,87,34,0.25);
+    background: linear-gradient(90deg, #ff5722, #ff9800);
+}
+@keyframes pumpFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    
+    40% { transform: translateY(0) scale(1); }
+    60% { transform: translateY(8px) scale(0.95); }
+    80% { transform: translateY(0) scale(1); }
+}
+.socials-large-section {
+    margin: 40px 0;
+    text-align: center;
+}
+.socials-large-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #333;
+}
+.socials-large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.socials-large .icon {
+    width: 90px;
+    height: 90px;
+    border: 5px solid #bbb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    transition: transform 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    margin: 10px 0;
+}
+.socials-large .icon img {
+    width: 50px;
+    height: 50px;
+}
+@media screen and (max-width: 600px) {
+    .socials-large {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .socials-large .icon {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+    }
+    .socials-large .icon img {
+        width: 38px;
+        height: 38px;
+    }
+    .socials-large-title {
+        font-size: 1.3rem;
+    }
+}
+.socials-large .icon.youtube:hover {
+    border-color: #ff0000;
+}
+.socials-large .icon.tiktok:hover {
+    border-color: #000000;
+}
+.socials-large .icon.instagram:hover {
+    border-color: #e1306c;
+}
+.socials-large .icon.facebook:hover {
+    border-color: #1877f3;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
